@@ -13,8 +13,9 @@ const queryClient: QueryClient = new QueryClient();
 const store = createStore({
     authName: "__auth",
     authType: "cookie",
-    cookieDomain: '127.0.0.1',
-    cookieSecure: false,
+    cookieDomain: window.location.hostname,
+    cookieSecure: window.location.protocol === 'https:',
+
 })
 
 const Providers = ({
