@@ -7,7 +7,7 @@ export const useSignINFeature = ()=>{
     const signIn = useSignIn();
     const {push}=useRouter()
 
-    const signIn = useMutation ({
+    const sign_In = useMutation ({
         mutationFn: async(body)=>{
             const {data}=await axios.post("http://8080/api/auth/sign-in",body);
 
